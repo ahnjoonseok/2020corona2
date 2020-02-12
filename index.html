@@ -1,0 +1,2723 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>신종 코로나 바이러스 타임라인, 한눈에 보기 </title>
+        
+        <meta property="og:image" content="https://img.sbs.co.kr/newimg/news/20200205/201399454.jpg" />
+        <meta property="og:url"                content="http://mabu.newscloud.sbs.co.kr/202002corona2/" />
+        <meta property="og:type"               content="article" />
+        <meta property="og:title"              content="신종 코로나 바이러스 타임라인, 한눈에 보기" />
+        <meta property="og:description"        content="마부작침은 한국의 신종 코로나 감염 상황과 감염자 동선을 날짜별로 알기 쉽게 정리했습니다." />
+
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+        <!-- <link rel="stylesheet" type="text/css" href="css/semantic.css"> -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/template.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/matrix.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <header id="headerbar">
+        <div id="headerbox">
+            <!-- <a href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114"><img src="./img/mabulogo.png" alt="" class="mabulogo"></a> -->
+            <a href="http://news.sbs.co.kr/"
+            ><img src="./img/logo.svg" alt="" class="sbslogo"
+            /></a>
+            <!-- <div class="headertext">INFOGRAPHICS</div> -->
+            <a id="kakao-link-btn" href="javascript:sendLink()">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/mabu.newscloud.sbs.co.kr/202002corona/kakao.png" alt="" class="social" id="kakao-link-btn">  </a>
+            <img src="http://img.sbs.co.kr/newimg/news/20170406/201037558.png" alt="" class="social" id="twitter"/>
+            <img src="http://img.sbs.co.kr/newimg/news/20170406/201037559.png" alt="" class="social" id="facebook"/>
+
+        </div>
+    </header>
+
+
+    
+    <div id="navigation" class="nav-hide">
+        <div class="navigationdatebox">
+            <a href="#day19">
+                <div class="summarydatebox">19 </div></a>
+                <a href="#day20">
+                <div class="summarydatebox redbordertext "> 20 </div></a>
+                <a href="#day21">
+                <div class="summarydatebox"> 21 </div></a>
+                <a href="#day22">
+                <div class="summarydatebox"> 22 </div></a>
+                <a href="#day23">
+                <div class="summarydatebox"> 23 </div></a>
+                <a href="#day24">
+                <div class="summarydatebox redbordertext"> 24 </div></a>
+                <a href="#day25">
+                <div class="summarydatebox"> 25 </div></a>
+                <a href="#day26">
+                <div class="summarydatebox redbordertext"> 26 </div></a>
+                <a href="#day27">
+                <div class="summarydatebox redbordertext"> 27 </div></a>
+                <a href="#day28">
+                <div class="summarydatebox"> 28 </div></a>
+                <a href="#day29">
+                <div class="summarydatebox"> 29 </div></a>
+                <a href="#day30">
+                <div class="summarydatebox redbordertext"> 30 </div></a>
+                <a href="#day31">
+                <div class="summarydatebox redbordertext"> 31 </div></a>
+                <a href="#day1">
+                <div class="summarydatebox redbordertext"> 1 </div></a>
+                <a href="#day2">
+                <div class="summarydatebox redbordertext"> 2 </div></a>
+                <a href="#day3">
+                <div class="summarydatebox"> 3 </div></a>
+                <a href="#day4">
+                <div class="summarydatebox redbordertext"> 4 </div></a>
+                <a href="#day5">
+                <div class="summarydatebox redbordertext"> 5 </div></a>
+                <a href="#day6">
+                <div class="summarydatebox redbordertext"> 6 </div></a>
+                <a href="#day7">
+                <div class="summarydatebox redbordertext"> 7 </div></a>
+                <a href="#day8">
+                <div class="summarydatebox"> 8 </div></a>
+                <a href="#day9">
+                <div class="summarydatebox redbordertext"> 9 </div></a>
+                <a href="#day10">
+                <div class="summarydatebox "> 10 </div></a>
+                <a href="#day10">
+                <div class="summarydatebox redbordertext "> 11 </div></a>
+                <a href="#day10">
+                    <div class="summarydatebox "> 12 </div></a>
+        </div>
+    </div>
+
+
+    <body>
+
+        <button onclick="topFunction()" id="myBtn1" title="Go to top">TOP</button>
+        <button onclick="listOpen()" id="myBtn2" title="Go to top">LIST</button>
+
+        <div id="patientlist" class="listhide">
+            <div class="listcontents">
+                <table style="width:100%">
+                    <tr>
+                        <th></th>
+                        <th>성별</th>
+                        <th>나이</th>
+                        <th>국적</th>
+                        <th>차수</th>
+                        <th>우한</th>
+                        <th>특이사항</th>
+
+                    </tr>
+                    <tr>
+                        <th><div class="whitedot2">1</div> </th>
+                        <th>여</th>
+                        <th class="listage">35</th class="listage">
+                        <th> <img src="./img/chn.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>2월 6일 퇴원</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="whitedot2">2</div> </th>
+                        <th>남</th>
+                        <th class="listage">55</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>2월 5일 퇴원</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="whitedot2">3</div> </th>
+                        <th>남</th>
+                        <th class="listage">54</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>6번과 22일 식사</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="whitedot2">4</div> </th>
+                        <th>남</th>
+                        <th class="listage">55</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>2월 9일 퇴원</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">5</div> </th>
+                        <th>남</th>
+                        <th class="listage">33</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>지인 1명 2차 감염</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">6</div> </th>
+                        <th>남</th>
+                        <th class="listage">55</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list2nd">2차</th>
+                        <th class="listblue">×</th>
+                        <th>3번과 식사</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">7</div> </th>
+                        <th>남</th>
+                        <th class="listage">28</th >
+                            <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th></th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">8</div> </th>
+                        <th>여</th>
+                        <th class="listage">62</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>7번과 접촉</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">9</div> </th>
+                        <th>여</th>
+                        <th class="listage">28</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list2nd">2차</th>
+                        <th class="listblue">×</th>
+                        <th>5번 환자 지인</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">10</div> </th>
+                        <th>여</th>
+                        <th class="listage">52</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list3rd">3차</th>
+                        <th class="listblue">×</th>
+                        <th>6번 환자 아내</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">11</div> </th>
+                        <th>남</th>
+                        <th class="listage">25</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list3rd">3차</th>
+                        <th class="listblue">×</th>
+                        <th>6번 환자 아들</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">12</div> </th>
+                        <th>남</th>
+                        <th class="listage">49</th>
+                        <th> <img src="./img/chn.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listblue">×</th>
+                        <th>일본 확진자와 접촉</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">13</div> </th>
+                        <th>남</th>
+                        <th class="listage">28</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>전세기 입국자</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">14</div> </th>
+                        <th>여</th>
+                        <th class="listage">40</th>
+                        <th> <img src="./img/chn.png" alt=""> </th>
+                        <th class="list2nd">2차</th>
+                        <th class="listblue">×</th>
+                        <th>능동 감시</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">15</div> </th>
+                        <th>남</th>
+                        <th class="listage">43</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th >○</th>
+                        <th>능동 감시</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">16</div> </th>
+                        <th>여</th>
+                        <th class="listage">42</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listblue">×</th>
+                        <th>태국 여행</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="whitedot2">17</div> </th>
+                        <th>남</th>
+                        <th class="listage">38</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listblue">×</th>
+                        <th>싱가포르 출장</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">18</div> </th>
+                        <th>여</th>
+                        <th class="listage">21</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list2nd">2차</th>
+                        <th class="listblue">×</th>
+                        <th>태국 여행</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">19</div> </th>
+                        <th>남</th>
+                        <th class="listage">36</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listblue">×</th>
+                        <th>싱가포르 출장</th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">20</div> </th>
+                        <th>여</th>
+                        <th class="listage">41</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list2nd">2차</th>
+                        <th class="listblue">×</th>
+                        <th></th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">21</div> </th>
+                        <th>여</th>
+                        <th class="listage">59</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list3rd">3차</th>
+                        <th class="listblue">×</th>
+                        <th></th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">22</div> </th>
+                        <th>남</th>
+                        <th class="listage">46</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list2nd">2차</th>
+                        <th class="listblue">×</th>
+                        <th></th>
+                         
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">23</div> </th>
+                        <th>여</th>
+                        <th class="listage">58</th>
+                        <th> <img src="./img/chn.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                          <th class="listcn">○</th>
+                        <th>관광 목적 입국</th>
+                         
+                    </tr>
+
+                    <tr>
+                        <th><div class="reddot2">24</div> </th>
+                        <th>남</th>
+                        <th class="listage">28</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st">1차</th>
+                        <th class="listcn">○</th>
+                        <th>우한 교민</th>
+                         
+                    </tr>
+
+                    <tr>
+                        <th><div class="reddot2">25</div> </th>
+                        <th>여</th>
+                        <th class="listage">73</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st"></th>
+                        <th class="listblue">×</th>
+                        <th>26번의 어머니</th>
+                    
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">26</div> </th>
+                        <th>남</th>
+                        <th class="listage">51</th>
+                        <th> <img src="./img/kor.png" alt=""> </th>
+                        <th class="list1st"></th>
+                        <th class="listblue">×</th>
+                        <th>광둥성 방문</th>
+                    
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">27</div> </th>
+                        <th>여</th>
+                        <th class="listage">37</th>
+                        <th> <img src="./img/chn.png" alt=""> </th>
+                        <th class="list1st"></th>
+                        <th class="listblue">×</th>
+                        <th>광둥성 방문</th>
+                    
+                    </tr>
+                    <tr>
+                        <th><div class="reddot2">28</div> </th>
+                        <th>여</th>
+                        <th class="listage">30</th>
+                        <th> <img src="./img/chn.png" alt=""> </th>
+                        <th class="list1st"></th>
+                        <th class="listblue">×</th>
+                        <th>3번 환자 지인</th>
+                    
+                    </tr>
+
+
+                  </table>
+            </div>
+        </div>
+
+
+
+        <section class="intro">
+        
+            <p id="introtext">CORONAVIRUS</p>
+            <h1>신종 코로나 바이러스<br> 타임라인 <strong style="color: #6496af;">한눈에 보기</strong> </h1>
+            <p id="author">데이터저널리즘팀 마부작침<br>
+                최종업데이트 2020년 2월 10일</p>
+
+            <p id="introduce">
+                마부작침은 한국의 <strong>신종 코로나 감염 상황</strong>과 <strong>감염자 동선</strong>을 날짜별로 알기 쉽게 정리했습니다. 
+                달력의 날짜를 누르면 그날로 이동해 당일 주요 사건과 확진 상황, 동선을 지도와 함께 살펴볼 수 있습니다. 우하단의 <strong style="color: white;">TOP</strong>을 누르면 맨 위로 돌아갑니다. <strong style="color: white;">LIST</strong>를 누르면 현재까지 확진자 명단과 간략한 정보를 한 번에 살펴볼 수 있습니다.(LIST를 다시 누르면 사라집니다.)
+            </p>
+        </section>
+
+        <section>   
+
+            <div class="current">
+                <div class="currentbox" >
+                    감염자 <br>
+                    <div class="currentnumbox redbordertext">
+                        <h2> 28명 </h2>
+                    </div>
+                </div>
+
+                <div class="currentbox">
+                    사망<br>
+                    <div class="currentnumboxdie">
+                        <h2> 0명 </h2>
+                    </div>
+                </div>
+                <div class="currentbox">
+                    완치<br>
+                    <div class="currentnumboxcure">
+                        <h2> 4명 </h2>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+
+        <section class="summary">
+            <div class="summarywrapper">
+
+                <div class="summarydowbox">일</div>
+                <div class="summarydowbox">월</div>
+                <div class="summarydowbox">화</div>
+                <div class="summarydowbox">수</div>
+                <div class="summarydowbox">목</div>
+                <div class="summarydowbox">금</div>
+                <div class="summarydowbox">토</div>
+
+                <a href="#day19">
+                <div class="summarydatebox"> 19 </div></a>
+                <a href="#day20">
+                <div class="summarydatebox redbordertext"> 20 </div></a>
+                <a href="#day21">
+                <div class="summarydatebox"> 21 </div></a>
+                <a href="#day22">
+                <div class="summarydatebox"> 22 </div></a>
+                <a href="#day23">
+                <div class="summarydatebox"> 23 </div></a>
+                <a href="#day24">
+                <div class="summarydatebox redbordertext"> 24 </div></a>
+                <a href="#day25">
+                <div class="summarydatebox"> 25 </div></a>
+                <a href="#day26">
+                <div class="summarydatebox redbordertext"> 26 </div></a>
+                <a href="#day27">
+                <div class="summarydatebox redbordertext"> 27 </div></a>
+                <a href="#day28">
+                <div class="summarydatebox"> 28 </div></a>
+                <a href="#day29">
+                <div class="summarydatebox"> 29 </div></a>
+                <a href="#day30">
+                <div class="summarydatebox redbordertext"> 30 </div></a>
+                <a href="#day31">
+                <div class="summarydatebox redbordertext"> 31 </div></a>
+                <a href="#day1">
+                <div class="summarydatebox redbordertext"> 1 </div></a>
+                <a href="#day2">
+                <div class="summarydatebox redbordertext"> 2 </div></a>
+                <a href="#day3">
+                <div class="summarydatebox"> 3 </div></a>
+                <a href="#day4">
+                <div class="summarydatebox redbordertext"> 4 </div></a>
+                <a href="#day5">
+                <div class="summarydatebox redbordertext"> 5 </div></a>
+                <a href="#day6">
+                <div class="summarydatebox redbordertext"> 6 </div></a>
+                <a href="#day7">
+                <div class="summarydatebox redbordertext"> 7 </div></a>
+                <a href="#day8">
+                <div class="summarydatebox"> 8 </div></a>
+                <a href="#day9">
+                <div class="summarydatebox redbordertext"> 9 </div></a>
+                <a href="#day10">
+                <div class="summarydatebox "> 10 </div></a>
+                <a href="#day11">
+                <div class="summarydatebox redbordertext "> 11 </div></a>
+                <a href="#day12">
+                <div class="summarydatebox "> 12 </div></a>
+
+            </div>
+
+            <div class="calsub">
+                확진자 발생일은 <strong class="redtext">붉은색으로</strong> 표시되어 있습니다.
+            </div>
+        </section>
+
+        <section class="fullcontents">
+
+            <div class="daycontents" id="day19">
+                <div class="datebox">
+                    <h2> 2020-01-19 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+
+                <p class="article">
+                    최초로 신종 코로나 바이러스 의심 환자가 발생했다. 인천공항에서 바로 격리됐다.
+                </p>
+
+                <div class="imgboxlarge" id="pic19_0">
+                    <div class="imgmap" style="background-image: url('./img/19.gif')">
+                    </div>
+                </div>
+
+                <div class="imgboxlarge" id="pic19_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399156.png)">
+                        <div class="imglocation">
+                            인천국제공항
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgboxlarge" id="pic19_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399150.png)">
+                        <div class="imglocation">
+                            무안국제공항
+                        </div>
+                    </div>
+                </div>
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">1</div> 
+                        <div class="mapdetailtext">
+                            35세 중국인 여성. 춘제를 맞아 일본과 한국 여행을 위해 <strong>인천공항</strong>을 통해 입국했다. 
+                            발열로 인해 공항 검역소에서 바로 격리 조치돼 인천의료원으로 이송됐다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            48세 중국인 남성. 관광 가이드 업무로 일본에서 체류를 하다가 <strong>김포공항</strong>김포공항을 통해 한국에 입국했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            40세 중국인 여성, 12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            42세 한국인 여성, 태국 여행 후 무안국제공항으로 입국했다.
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+            <div class="daycontents" id="day20">
+                <div class="datebox redbordertext">
+                    <h2> 2020-01-20 </h2>
+                </div>
+                <p class="dateText redtext">
+                    국내 최초 확진자 발생
+                </p>
+                <p class="article">
+                    신종 코로나 바이러스 감염증 환자가 국내에서 처음 확인됐다. 전날 우한에서 인천공항을 통해 입국한 <strong>35세 중국인 여성</strong>으로 폐렴 증상은 없었다.
+                    질병관리본부는 감염병 위기 경보를 '관심'에서 '주의'로 상향 조정했다. 또 중앙방역대책본부를 가동하기 시작했다. 
+                </p>
+
+                <div class="imgboxlarge" id="pic20_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399157.png)">
+                        <div class="imglocation">
+                            서울 중구
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic20_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399153.png)">
+                        <div class="imglocation">
+                            부천
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic20_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399215.png)">
+                        <div class="imglocation">
+                            인천국제공항
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic20_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399149.png)">
+                        <div class="imglocation">
+                            평택
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">3</div> 
+                        <div class="mapdetailtext">
+                            54세 한국인 남성. 우한에서 거주하다가 20일 일시적으로 입국했다. 
+                            일산에 있는 모친의 집에 방문했고, 근처 음식점에 들렀다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            55세 한국인 남성. 우한에서 인천공항으로 입국했다. 
+                            오후 5시 30분 공항버스(8834번)를 타고 평택 송탄터미널로 이동했다.
+                             이후 택시를 타고 자택으로 갔다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            48세 중국인 남성. 지하철을 타고 서울 중구의 신라면세점(구찌, 루이비통 매장)에 방문했다. 
+                            이후 택시를 타고 중구에 있는 음식점에 들렀고, 남대문시장에서 쇼핑을 했다. 오후 7시 20분 CGV부천역점(8층 5관)에서 영화 관람을 했고, 
+                            밤 11시 부천 小串王 왕중왕 음식점에 들렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">15</div> 
+                        <div class="mapdetailtext">
+                            43세 한국인 남성. 4번 확진자와 같은 비행기를 타고 우한에서 인천공항으로 입국했다.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+            <div class="daycontents" id="day21">
+                <div class="datebox">
+                    <h2> 2020-01-21 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+
+
+                <div class="imgboxlarge" id="pic21_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399152.png)">
+                        <div class="imglocation">
+                            서울 강남, 역삼
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic21_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399371.png)">
+                        <div class="imglocation">
+                            평택
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic21_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399372.png)">
+                        <div class="imglocation">
+                            인천
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">3</div> 
+                        <div class="mapdetailtext">
+                            일산의 어머니 집에서 나와 렌터카를 대여해 서울 강남 글로비 성형외과로 이동했다. 오후에는 호텔뉴브에 투숙했다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            평택의 365연합의원에 내원했다. 의사가 우한에 방문했는지 물어봤지만 제대로 된 답변을 듣지 못했다. 이후 자차를 이용해 집으로 돌아왔다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            지하철과 택시를 이용해서 인천출입국사무소에 도착했다. 이후 택시를 타고 인천시 미추홀구에 있는 친구 집을 방문했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="daycontents" id="day22">
+                <div class="datebox">
+                    <h2> 2020-01-22 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+
+
+                <div class="imgboxlarge" id="pic22_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399158.png)">
+                        <div class="imglocation">
+                            김포국제공항
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic22_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399162.png)">
+                        서울
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic22_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399155.png)">
+                        <div class="imglocation">
+                            강릉
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic22_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399375.png)">
+                        <div class="imglocation">
+                            정동진
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">2</div> 
+                        <div class="mapdetailtext">
+                            55세 한국인 남성. 우한에서 상하이를 경유해 김포공항에 입국했다. 입국 당시 검역에서 발열이 있어 능동감시대상자로 분류됐다. 택시를 타고 자택으로 이동했고 이후에는 자택에 머물렀다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">3</div> 
+                        <div class="mapdetailtext">
+                            렌터카를 타고 지인과 함께 서울 강남 글로비 성형외과로 이동했다. 저녁엔 6번 확진자와 함께 한일관 압구정점에서 식사를 했고 본죽&비빔밥 Cafe 신사점에 들렀다. 이후 호텔뉴브로 돌아왔다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">6</div> 
+                        <div class="mapdetailtext">
+                            55세 한국인 남성. 3번 확진자와 한일관에서 저녁식사를 했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            오전 9시 부천의 한 약국에 방문한 뒤 지하철을 타고 서울역으로 이동해 편의점 등을 이용했다. 오전 11시 01분 출발 KTX(8호차)를 타고 오후 1시경 강릉역에 도착. 오후 2시 부자대게에 들렀고 택시를 타고 썬크루즈리조트로 이동했다. 오후 5시경 커피숍에 들렀다가 정동진 초당순두부집에 방문했다. 저녁 7시에 다시 숙소로 돌아왔다
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day23">
+                <div class="datebox">
+                    <h2> 2020-01-23 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+                <p class="article">
+                    외교부는 중국 우한에 대해 여행 경보 2단계인 '여행 자제' 지역으로 지정했다. 인천과 중국 우한의 직항 항공편이 중단됐다.
+                </p>
+
+                <div class="imgboxlarge" id="pic19_0">
+                    <div class="imgmap" style="background-image: url('./img/t3.gif')">
+                    </div>
+                </div>
+
+
+                <div class="imgboxlarge" id="pic23_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400350.png)">
+                        <div class="imglocation">
+                            인천국제공항
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic23_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399161.png)">
+                        <div class="imglocation">
+                            강서
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic23_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399169.png)">
+
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic23_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399163.png)">
+                        <div class="imglocation">
+                            부천
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic23_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399160.png)">
+                        <div class="imglocation">
+                            강릉, 정동진
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">2</div> 
+                        <div class="mapdetailtext">
+                            서울 강서구보건소에서 진료후 감염 확인자로 확인돼 국립중앙의료원에 격리 조치됐다.                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">3</div> 
+                        <div class="mapdetailtext">
+                            호텔뉴브에서 나와 한강변에 있는 GS한강잠원 1호점에 들렀고 이후 역삼동과 대치동 일대의 음식점으로 이동했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">7</div> 
+                        <div class="mapdetailtext">
+                            28세 한국인 남성. 우한에서 청도를 경유해 인천공항으로 입국했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            62세 한국인 여성. 우한에서 청도를 경유해 인천공항으로 입국했다. 아들의 차량을 타고 집으로 이동했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                           강릉 썬크루즈리조트에서 강릉역으로 이동해 오후 12시 30분 출발 KTX(7호차)를 타고 오후 2시 27분 서울역에 도착했다. 이후 지하철을 타고 부천으로 이동한 뒤 부천속내과에 방문했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">23</div> 
+                        <div class="mapdetailtext">
+                            57세 중국인 여성. 관광 목적으로 인천국제공항으로 입국했다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day24">
+                <div class="datebox redbordertext" >
+                    <h2> 2020-01-24 </h2>
+                </div>
+                <p class="dateText redtext">
+                    두번째 확진자는 한국인
+                </p>
+                <p class="article">
+                    국내 두번째 확진자는 55세 남성, 한국인 첫 확진자로 기록됐다. 2번 환자 역시 중국 우한에서 상하이를 거쳐 인천공항으로 입국했다.
+                </p>
+
+                <div class="imgboxlarge" id="pic24_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399925.png)">
+                        <div class="imglocation">
+                            인천국제공항
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgboxlarge" id="pic24_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399174.png)">
+                        <div class="imglocation">
+                            일산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic24_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399168.png)">
+                        <div class="imglocation">
+                            신사동
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic24_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399167.png)">
+                        <div class="imglocation">
+                            수원
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic24_6">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399923.png)">
+                        <div class="imglocation">
+                            서울역
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic24_7">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399922.png)">
+                        <div class="imglocation">
+                            대구
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">3</div> 
+                        <div class="mapdetailtext">
+                            강남 글로비 성형외과에 지인과 함께 들렀고 이후 일산의 어머님 집으로 향했다. 오후 2시, 본죽 일산 정발산점에 들렀고 4시에는 식사동에 있는 스타벅스로 이동했다. 저녁에는 다시 일산의 어머니 집으로 향했다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            33세 한국인 남성. 우한에서 인천공항으로 귀국했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            지하철을 타고 수원역으로 이동했다. 택시를 타고 수원에 있는 친척집에 방문했고 다시 버스를 타고 군포에 있는 친척집으로 이동했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            38세 한국인 남성. 싱가포르에서 인천공항으로 귀국했다. 
+                            9시 30분경 공항철도를 타고 서울역으로 이동해 북창동순두부 서울역점, 중앙온누리약국에 방문했다.
+                            12시 40분에 KTX(7호차)를 타고 14시 22분 동대구역에 도착. 택시를 이용해 대구 본가로 이동했다.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day25">
+                <div class="datebox">
+                    <h2> 2020-01-25 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+
+                <div class="imgboxlarge" id="pic25_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399176.png)">
+                        <div class="imglocation">
+                            성신여대
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399172.png)">
+                        <div class="imglocation">
+                            교대
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_7">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399930.png)">
+                        <div class="imglocation">
+                            대구
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399177.png)">
+                        <div class="imglocation">
+                            군포
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399178.png)">
+                        <div class="imglocation">
+                            평택
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_6">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399928.png)">
+                        <div class="imglocation">
+                            수서 광나루
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399175.png)">
+                        <div class="imglocation">
+                            군산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic25_8">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400351.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">3</div> 
+                        <div class="mapdetailtext">
+                            고열, 폐렴 증상을 보여 1339에 신고해 일산명지병원에 입원 조치를 받았다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            발열과 근육통이 이어져 평택의 365연합의원에 재차 내원했다. 우한에 방문했다는 사실을 밝히고 능동감시를 실시했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            오후 4시 45분 CGV 성신여대점에서 지인들과 함께 영화를 관람했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            서울 서초구의 풍미감자탕에서 점심식사 후 아들 차를 타고 집으로 이동했다. 이후 군산의 선창아구에서 저녁을 먹었고 다시 집으로 돌아왔다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            친척집에서 택시를 타고 더건강한내과에 방문했다. 진료 후 현대약국에 들렀고 지하철을 타고 자택으로 돌아왔다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            자차를 타고 광주광역시 남구의 우리마트에 방문했다. 이후 자차를 이용해 전남 나주에 있는 친정집에 방문 후 20시경 자택으로 귀가했다. 저녁부터 오한 증상이 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            자차 이용해 대구에 있는 처가에 방문했다. 
+                            이후 대구 수성구에 있는 미니주유소에 방문했고, 택시를 타고 동대구역으로 이동, 
+                            동대구역에 있는 스토리웨이 동대구신맞이방 편의점에 방문했다. 
+                            21시 26분에 SRT(SRT 370)를 이용하여 수서역으로 이동했다. 이후 지하철을 타고 광나루역으로 갔다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="daycontents" id="day26">
+                <div class="datebox redbordertext">
+                    <h2> 2020-01-26 </h2>
+                </div>
+                <p class="dateText redtext">
+                    세번째 확진자 발생
+                </p>
+                <p class="article">
+                    국내 세번째 확진자도 중국 우한에서 들어온 50대 한국인 남성이었다. 
+                    나중에 밝혀지지만 22일 함께 식사한 6번 환자를 이미 감염시켰고 일산과 강남소재 성형외과, 
+                    호텔 등을 돌아다녔다.
+                </p>
+
+                <div class="imgboxlarge" id="pic26_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399185.png)">
+                        <div class="imglocation">
+                            서울
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic26_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399179.png)">
+                        <div class="imglocation">
+                            부천
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic26_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399183.png)">
+                        <div class="imglocation">
+                            평택
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic26_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399184.png)">
+                        <div class="imglocation">
+                            군산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic26_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399936.png)">
+                        <div class="imglocation">
+                            경기도 구리
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">4</div> 
+                        <div class="mapdetailtext">
+                            근육통이 악화돼 평택 송탄보건소에 들러 검진을 받고 폐렴 진단을 받았다. 이후 분당서울대병원으로 격리됐다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            다이소 성신여대역점에 방문했다. 11시쯤 지하철을 타고 성동구에 있는 선녀보살에 들렀다. 다시 지하철을 타고 마사지샵(선호케어)에 갔다가 성북구에 있는 숙소로 이동했다. 근처에 있는 이마트24와 GS25, 식자재유통센터, 두꺼비마트에 방문했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">6</div> 
+                        <div class="mapdetailtext">
+                            집 근처에 있는 명륜교회에 새벽, 오전예배에 참석했다. 점심 식사 이후 오후 예배까지 참석한 뒤 종로구 일대의 음식점에서 저녁식사 후 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">7</div> 
+                        <div class="mapdetailtext">
+                            기침 증상이 있어서 자택에만 있었다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            군산에 있는 아센사우나에 방문했다. 이후 참치본가에 들러 저녁을 먹었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            CGV부천역점 8층 4관에서 영화를 관람했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            새벽(00:22~00:33)에 택시를 타고 자택에 귀가했다. 
+                            18시경 택시를 타고 한양대학교 구리병원에 방문했다. 
+                            21시경 택시를 타고 자택으로 귀가했다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="daycontents" id="day27">
+                <div class="datebox redbordertext">
+                    <h2> 2020-01-27 </h2>
+                </div>
+                <p class="dateText redtext">
+                    네번째 확진자 발생
+                </p>
+                <p class="article">
+                    국내 네번째 확진자도 중국 우한에서 들어온 50대 한국인 남성이었다. 
+                    평택의 의원을 두 번 방문한 끝에 신종 코로나 검사를 받아 확진 판정받았다.
+                    문재인 대통령은 "중국 우한 입국자를 전수 조사하라"고 지시했다. 감염병 위기 경보는 '주의'에서 '경계'로 상향 조정됐다. 
+                    설 연휴가 끝났다. WHO는 신종 코로나의 위험 수준을 '보통'에서 '높음'으로 조정했다.
+                </p>
+
+                <div class="imgboxlarge" id="pic26_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399186.png)">
+                        <div class="imglocation">
+                            서울
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic26_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399181.png)">
+                        <div class="imglocation">
+                            부천
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic27_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399180.png)">
+                        <div class="imglocation">
+                            군산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic27_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400353.png)">
+                        <div class="imglocation" style="float: right; position: relative;">
+                            광주
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic27_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399941.png)">
+                        <div class="imglocation" >
+                            구리
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mapdetail"> &nbsp
+                    <div class="reddottextbox">
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            오후에 서울 성북구 돈암동떡볶이로 이동했다. 이후 두꺼비마트와 럭키후레쉬마트에 들렀다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">6</div> 
+                        <div class="mapdetailtext">
+                            3번 확진자의 접촉자로 통보 받아 자가격리에 들어갔다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">7</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            발열, 기침 증상이 지속돼서 군산 유남진내과에서 진료를 받았다. 약을 처방 받고 자차를 이용해 집으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            지하철을 타고 서울 중구의 신라면세점(구찌, 매장)에 방문했다. 이후 택시를 타고 중구에 있는 음식점에 들렀다. 지하철을 타고 오후 3시경 부천 종로약국에 들러 약을 처방 받고 집으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            발열 증상이 지속돼 자차를 이용해 9시경 광주 광산구의 광주21세기병원에 방문했다. 
+                            광주21세기병원에 입원 중인 딸과 함께 1인실에 머물다 18시경 전남대병원 응급실을 방문했다. 
+                            응급실 진료 후 22시경 다시 광주21세기병원으로 자차로 이동했다
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            14시경 택시를 타고 구리시 삼성서울가정의원에 방문했다. 
+                            진료 후 구리종로약국으로 이동한 뒤, 15시 30분경 택시를 타고 자택으로 귀가했다
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            20세 한국인 여성, 16번 확진자의 가족이다. 광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="daycontents" id="day28">
+                <div class="datebox">
+                    <h2> 2020-01-28 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+                <p class="article">
+                    외교부는 중국 전 지역에 대해 여행경보 2단계인 '여행 자제' 지역으로 지정했다.
+                </p>
+
+            <div style="margin-bottom: 1px; padding-bottom: 5px;">
+  
+                <div class="imgboxlarge" id="pic19_0"> 
+                    <div class="imgmap" style="background-image: url('./img/t2.gif')">
+                    </div>
+                </div>
+
+                <div class="imgboxlarge" id="pic28_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399203.png)">
+                        <div class="imglocation">
+                            성신여대
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic28_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399202.png)">
+                        <div class="imglocation">
+                            성북구
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic28_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399204.png)">
+                        <div class="imglocation">
+                            청담
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic28_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399201.png)">
+                        <div class="imglocation">
+                            부천
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic28_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399199.png)">
+                        <div class="imglocation">
+                            군산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic28_6">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400355.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                
+
+            &nbsp&nbsp&nbsp
+                <div class="mapdetail">               &nbsp&nbsp&nbsp
+                    <div class="reddottextbox"> 
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            성북구에 있는 예쁠레뷰티라인 미용실을 이용하고 버스를 타고서 중랑구에 위치한 가락홈마트를 이용했다. 이후 이가네 바지락칼국수(면목동)에서 식사를 한 뒤 지하철을 타고 강남구에 있는 와이즈웨딩에 들렀다. 
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">6</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">7</div> 
+                        <div class="mapdetailtext">
+                            감기 기운이 있어서 자택에 머물렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            발열, 기침 증상이 지속돼서 군산의료원에서 진료를 받았다. 코로나바이러스 음성으로 결과가 나와 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            오후 2시경 부천속내과에 방문해 진료를 받았다. 이후 서전약국에 들러 약을 처방 받았다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            12번 확진자의 가족으로 이동 경로는 동일하다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            딸의 간병과 본인의 진료를 위해 광주21세기병원에 체류했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="daycontents" id="day29">
+                <div class="datebox">
+                    <h2> 2020-01-29 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+                <p class="article">
+                    정부는 중국 우한 교민을 철수시키기로 결정했다. 
+                    임시수용 지역으로 선정된 충남 아산과 진천 주민들이 반대 시위를 벌였다.
+                </p>
+
+
+
+                <div class="imgboxlarge" id="pic29_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399209.png)">
+                        <div class="imglocation">
+                            중랑구
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic29_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic29_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399208.png)">
+                        <div class="imglocation">
+                            군산
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgboxlarge" id="pic29_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400361.png)">
+                        <div class="imglocation">
+                            구리
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic29_5">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400362.png)">
+                        <div class="imglocation">
+                            종로
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            아버지 차량을 타고 중랑구 보건소에서 검사 받고 다시 자택으로 이동했다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">6</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+
+                        <div class="reddot">7</div> 
+                        <div class="mapdetailtext">
+                            발열, 기침 증상이 지속돼서 보건소로 이동했다. 검사 후 구급차량으로 귀가했다.
+                        </div>
+                    </div>
+                        <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            군산에 있는 우리떡갈비에서 점심을 먹었다. 이후 이마트 군산점에 방문했다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">10</div> 
+                        <div class="mapdetailtext">
+                            54세 한국인 여성. 두통 증상이 발생했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            종일 집에만 머물렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            딸의 간병과 본인의 진료를 위해 광주21세기병원에 체류했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            15시경 도보로 프리마트 구리점과 이삭토스트 구리장자못점에 방문했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            59세 한국인 여성, 6번 확진자의 지인으로 18시 20분경 자차를 타고 종로구 명륜교회 예배당(본당)에 방문했다. 
+                            이후 자차를 타고 20시 20분경 자택으로 귀가했다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day30">
+                <div class="datebox redbordertext">
+                    <h2> 2020-01-30 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 3명 추가<br>2차 감염 시작
+                </p>
+                <p class="article">
+                    5번, 6번, 7번 확진자 3명이 한꺼번에 추가됐다. 
+                    20대와 30대 감염이 처음 확인됐고 6번 환자는 국내 최초로 3번 환자와 식사를 함께 한 뒤 2차 감염됐다. 
+                    개성 남북연락사무소 운영이 중단됐다. 중국 춘제 연휴가 끝났다.
+                </p>
+
+                <div class="imgboxlarge smallbox">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399211.png)">
+                        <div class="imglocation">
+                            일산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                            일산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic30_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399210.png)">
+                        <div class="imglocation">
+                            부천
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">5</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 서울의료원으로 이송됐다.                        
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">6</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 서울의료원으로 이송됐다.  
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">7</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 서울의료원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            발열, 기침 증상이 호전되지 않아 원광대 병원에 내원해 입원 조치를 받았다
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">9</div> 
+                        <div class="mapdetailtext">
+                            28세 한국인 여성. 5번 확진자의 접촉자로 통보 받고 자택에만 머물렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">10</div> 
+                        <div class="mapdetailtext">
+                            점심쯤 자차를 이용하여 일산의 메종드아이디헤어 백석벨라시타점을 이용한 뒤 자택으로 귀가했다. 이후 6번 확진자의 접촉자로 통보 받고 자택에 머물렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">11</div> 
+                        <div class="mapdetailtext">
+                            25세 한국인 남성. 몸살 기운이 있었다. 점심쯤 자차를 이용하여 일산의 메종드아이디헤어 백석벨라시타점을 이용한 뒤 자택으로 귀가했다. 이후 6번 확진자의 접촉자로 통보 받고 자택에 머물렀다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            택시를 타고 10시경 부천보건소 선별진료소에 방문했다. 이후 택시를 타고 자택 귀가, 13시경 순천향대학교부속 부천병원에 방문했고, 16시경 이마트 부천점에 방문하여 약 20분간 체류했다. 17시부터 자가 격리 시작했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            택시를 타고 10시경 부천보건소 선별진료소에 방문했다. 이후 택시를 타고 자택 귀가, 13시경 순천향대학교부속 부천병원에 방문했고, 16시경 이마트 부천점에 방문하여 약 20분간 체류했다
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            딸의 간병과 본인의 진료를 위해 광주21세기병원에 체류했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            36세 한국인 남성. 자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="daycontents" id="day31">
+                <div class="datebox redbordertext">
+                    <h2> 2020-01-31 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 4명 추가<br>
+                    3차 감염 첫 발생
+                </p>
+                <p class="article">
+                    8번, 9번, 10번, 11번 확진자 4명이 추가됐다. 한국인 여성 환자가 첫 등장, 60대도 처음, 
+                    3차 감염도 처음 발생한 날이다. 
+                    9번 환자는 5번에게서 2차 감염, 6번의 가족인 10번과 11번 환자는 6번에게 3차 감염된 것으로 확인됐다. 
+                    중국 우한 교민이 1차 귀국했다. WHO는 신종 코로나 비상 사태를 선포했다.  
+                </p>
+
+                <div class="imgboxlarge" id="pic19_0">
+                    <div class="imgmap" style="background-image: url('./img/31.gif')">
+                    </div>
+                </div>
+
+                <div class="imgboxlarge" id="pic31_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200210/201401108.png)">
+                        <div class="imglocation">
+                            인천
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic31_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399218.png)">
+                        <div class="imglocation">
+                            아산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic31_4">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400365.png)">
+                        <div class="imglocation">
+                            서울 송파
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic31_3">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">8</div> 
+                        <div class="mapdetailtext">
+                            원광대 병원에 입원 중 확진 판정을 받았다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">9</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 서울의료원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">10</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 서울대병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">11</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 서울대병원으로 이송됐다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            종일 집에만 머물렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">13</div> 
+                        <div class="mapdetailtext">
+                            28세 한국인 남성. 임시항공편으로 우한에서 한국으로 1차 귀국해 충남 아산 임시생활 시설로 이동됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            종일 집에만 머물렀다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            딸의 간병과 본인의 진료를 위해 광주21세기병원에 체류했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            자차를 타고 성남시 분당구 소재 회사에 출근했다. 이후 자차를 이용해 12시경 분당구 소재 부모님 댁에 들렀다. 13시경 자차를 타고 회사에 복귀한 뒤 19시경 송파구 파리바게뜨 헬리오시티에 방문했다. 19시 15분경 송파구 교촌치킨 가락2호점에 들른 뒤, 22시경 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            6번 확진자의 접촉자로 확인되어 자가 격리를 시작했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">26</div> 
+                        <div class="mapdetailtext">
+                            51세 한국인 남성. 마카오에서 인천공항으로 귀국했다. 21시경 택시를 타고 자택으로 이동했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            37세 중국인 여성. 마카오에서 인천공항응로 귀국했다. 21시경 택시를 타고 자택으로 이동했다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day1">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-01 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 1명 추가<br>
+                    '국제 3차 감염' 사례
+                </p>
+                <p class="article">
+                    12번 확진자 1명이 추가됐다. 
+                    12번은 일본에서 중국인관광객에게 감염된 관광가이드와 식사해 감염된 것으로 추정돼 
+                    '국제 3차 감염' 사례로 꼽혔다. 
+                    또 12번은 부천 집에서 군포, 수원의 친척집, 강릉 등 여러 곳을 돌아다닌 것으로 나타나 
+                    2차 감염 우려가 커졌다. 
+                    중국 우한 교민이 2차 귀국했다.
+                </p>
+
+                <div class="imgboxlarge" id="pic01_1">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399221.png)">
+                        <div class="imglocation">
+                            수원
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge" id="pic01_2">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399218.png)">
+                        <div class="imglocation">
+                            아산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge widebox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400367.png)">
+                        <div class="imglocation">
+                            서울
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400368.png)">
+                        <div class="imglocation">
+                            송도
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">12</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 분당서울대병원으로 이송됐다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            종일 집에만 머물렀다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">15</div> 
+                        <div class="mapdetailtext">
+                            자가 격리 중 오후 2시경 자차를 이용하여 수원 장안구보건소에 방문해 검사를 받고 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            딸의 간병과 본인의 진료를 위해 광주21세기병원에 체류했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            도보로 9시 40분경 송파구파리바게뜨 헬리오시티에 방문했다. 이후 자차를 타고 12시경 가족 모임 위해 강남의 르메르디앙서울 호텔에 방문했고 15시경에 자택으로 귀가했다. 이후 16시경 부모님 차량을 타고 현대프리미엄아울렛 송도점에 방문했고, 부모님 차량을 이용하여 19시 30분경 송파구 원가네칼국수에 들른 뒤 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day2">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-02 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 3명 추가<br>우한 입국교민 중 첫 확진자
+                </p>
+                <p class="article">
+                    13, 14, 15번 확진자가 추가됐다. 우한에서 1차 입국한 교민에서 첫 확진자가 나왔다. 
+                    12번 환자의 아내인 14번 환자는 2차 감염인데 역시 12번과 함께 여러 곳을 다녔던 것으로 나타났다. 
+                    정부는 2주 내 중국 후베이성 방문 이력이 있는 외국인의 입국을 금지하기로 했다.
+                </p>
+
+                <div class="imgboxlarge" id="pic19_0">
+                    <div class="imgmap" style="background-image: url('./img/2.gif')">
+                    </div>
+                </div>
+
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200204/201399218.png)">
+                        <div class="imglocation">
+                            아산
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox">
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                           광주
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge bigbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400373.png)">
+                        <div class="imglocation">
+                            서울
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="mapdetail"> &nbsp&nbsp&nbsp
+                    <div class="reddottextbox">
+                        <div class="reddot">13</div> 
+                        <div class="mapdetailtext">
+                            1차 입국교민 전수진단검사 과정에서 확인돼 국립중앙의료원으로 이송됐다.
+                        </div>
+                    </div>
+
+                    <div class="reddottextbox">
+                        <div class="reddot">14</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 분당서울대병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">15</div> 
+                        <div class="mapdetailtext">
+                            자택에 머물다 확진판정을 받고 국군수도병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            딸의 간병과 본인의 진료를 위해 광주21세기병원에 체류했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">23</div> 
+                        <div class="mapdetailtext">
+                            12시경 서울시 중구의 프레지던트호텔에서 퇴실 후 도보로 롯데백화점 본점에 방문했다. 이후 지인의 차량을 타고 13시경 서울시 서대문구 숙소로 이동했다. 
+                            다시 지인의 차량을 이용하여 14시 20분경 이마트 마포공덕점에 방문한 뒤, 지인 차량을 타고 서대문구 숙소로 복귀했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day3">
+                <div class="datebox">
+                    <h2> 2020-02-03 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+                <p class="article">
+                    전국 336개 유치원과 학교가 휴업에 들어갔다.
+                </p>
+                <div class="imgboxlarge bigbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200210/201401107.png)">
+                        <div class="imglocation">
+                            경기도 시흥
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400355.png)">
+                        <div class="imglocation">
+                            구리
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400378.png)">
+                        <div class="imglocation">
+                            서울 광나루
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400380.png)">
+                        <div class="imglocation">
+                            서울 성북구
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400379.png)">
+                        <div class="imglocation">
+                            성남구 분당
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                            전남대병원에 내원해 격리 조치를 받았다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            도보로 구리의 서울아산내과에 방문했다. 진료 후 17시경 수약국에 들렀고, 
+                            17시 10분경 본죽 구리토평점에 방문 후 자택으로 귀가했다. 20시경 버스를 타고 광나루역으로 이동해, 
+                            20시 15분경 광나루역에 있는 이마트24 광나루역점에 방문했다. 
+                            광나루역 앞에서 지인을 만난 후 20시 36분 버스를 타고 자택으로 귀가했다
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원의 1인실에 입원했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            자차를 타고 분당구에 있는 회사로 출근했다. 
+                            도보로 분당구의 통영별미에 방문한 뒤 점심식사 후 회사에 복귀했다. 
+                            이후 자차를 이용해 자택으로 복귀했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">20</div> 
+                        <div class="mapdetailtext">
+                            41세 한국인 여성. 15번 확진자의 가족으로 15번 확진자가 2월 2일 확진되어 2월 2일부터 자가 격리중이었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            보건소 차량을 타고 서울시 성북구보건소에 방문한 뒤 다시 보건소 차량을 이용해 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">23</div> 
+                        <div class="mapdetailtext">
+                            숙소에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자차를 타고 19시 30분경 시흥의 태양38년전통 그옛날손짜장 음식점에 방문했다.
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day4">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-04 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 1명 추가<br>태국 여행 중 감염
+                </p>
+                <p class="article">
+                    16번 확진자 1명이 추가됐다. 16번 환자는 태국 여행을 다녀왔는데 감염된 것으로 나타나
+                     중국 외 지역 입국자에 대한 방역대책이 마련돼야 한다는 지적이 나왔다.
+                     2주 내 중국 후베이성 방문 이력이 있는 외국인 입국 금지가 시행됐다.
+                </p>
+
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200206/201399951.png)">
+                        <div class="imglocation">
+                            구리
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallboxend" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">16</div> 
+                        <div class="mapdetailtext">
+                           전남대병원에서 격리 조치 중에 확진판정을 받았다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">17</div> 
+                        <div class="mapdetailtext">
+                            택시를 타고 한양대학교 구리병원에 방문했다. 이후 보건소 차량을 타고 자택으로 돌아갔다. 자택 격리 중 확진되어 명지병원으로 이송 처리됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원에 입원 중 확진 판정받아 1인실로 격리됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">20</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">22</div> 
+                        <div class="mapdetailtext">
+                            46세 한국인 남성. 16번 확진자의 가족으로 16번 확진자의 접촉자로 확인되어 15시 30분경부터 자가 격리를 시작했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">23</div> 
+                        <div class="mapdetailtext">
+                            숙소에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day5">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-05 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 3명 추가<br>싱가포르에서 감염
+                    <br> <span style="color: white">2번 환자 퇴원</span>
+                    </p>
+                <p class="article">
+                    17, 18, 19번 확진자가 추가됐다. 17번 환자는 1.18~24, 19번 환자는 1.18~23 싱가포르 출장을 다녀오면서 감염된 것으로 추정된다. 18번 환자는 16번 환자의 딸이다. 
+                    교육부는 3월 개강시기를 4주 이내에서 대학이 조정할 것을 권고했다. 
+                </p>
+
+                <div class="imgboxlarge bigbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200210/201401107.png)">
+                        <div class="imglocation">
+                            경기도 시흥
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400360.png)">
+                        <div class="imglocation">
+                            광주
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400380.png)">
+                        <div class="imglocation">
+                            서울 성북구
+                        </div>
+                    </div>
+                </div>
+                <div class="imgboxlarge smallboxmiddle" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200207/201400381.png)">
+                        <div class="imglocation">
+                            수원시 장안구
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="whitedot">2</div> 
+                        <div class="mapdetailtext">
+                            증상이 호전되고 2회 이상 시행한 검사 결과도 음성으로 확인되어 최종 퇴원 결정.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">18</div> 
+                        <div class="mapdetailtext">
+                            광주21세기병원 1인실 격리 중 확진 판정 받고 전남대학교 병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">19</div> 
+                        <div class="mapdetailtext">
+                            자택 격리 중에 확진 판정을 받고 서울 의료원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">20</div> 
+                        <div class="mapdetailtext">
+                            자차를 타고 수원시 장안구보건소로 이동, 검사를 받고 자택으로 귀가했다. 자택에서 머물다 확진 판정을 받고 국군수도병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">21</div> 
+                        <div class="mapdetailtext">
+                            보건소 차량을 타고 서울시 성북구보건소로 이동한 뒤 검사를 받고, 다시 보건소 차량을 이용해 자택으로 귀가했다. 자택에서 머물다 확진 판정 받고 서울대학교병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">22</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">23</div> 
+                        <div class="mapdetailtext">
+                            숙소에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">25</div> 
+                        <div class="mapdetailtext">
+                            73세 한국인 여성, 26번 확진자, 27번 확진자의 가족이다. 도보로 경기 시흥시의 매화할인마트에 방문했다. 이후 도보로 자택에 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="daycontents" id="day6">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-06 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 4명 추가<br> 2, 3차 감염 3명 
+                    </p>
+                <p class="article">
+                    20, 21, 22, 23번 확진자가 추가됐다. 20번 환자는 15번의 가족, 22번은 16번의 가족이다. 
+                    21번은 6번 환자의 접촉자, 23번은 관광 목적으로 1월 23일 입국한 중국인이다. 
+                </p>
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">22</div> 
+                        <div class="mapdetailtext">
+                            자택에만 머물다 확진 판정을 받고 조선대학교 병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">23</div> 
+                        <div class="mapdetailtext">
+                            숙소에 머물다 국립중앙의료원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">25</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day7">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-07 </h2>
+                </div>   
+                <p class="dateText redtext">
+                    확진자 1명 추가
+                </p>
+                <p class="article">
+                    24번 확진자가 추가됐다. 중국 우한에서 전세기 편에 귀국해 임시격리 중이던 20대 남성이다. 
+                </p>
+                <div class="imgboxlarge bigbox" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200210/201401110.png)">
+                        <div class="imglocation">
+                            경기도 시흥
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapdetail">
+                    <div class="reddottextbox">
+                        <div class="reddot">25</div> 
+                        <div class="mapdetailtext">
+                            9시경 자차를 타고 26번 확진자와 함께 시흥의 신천연합병원 선별진료소에 방문했다. 이후 엘마트 시흥점에 방문한 뒤 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">26</div> 
+                        <div class="mapdetailtext">
+                            9시경 자차를 타고 25번 확진자와 함께 시흥의 신천연합병원 선별진료소에 방문했다. 이후 엘마트 시흥점에 방문한 뒤 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="daycontents" id="day8">
+                <div class="datebox ">
+                    <h2> 2020-02-08 </h2>
+                </div>
+                <p class="dateText">
+                     확진자 없음
+                </p>
+                <p class="article">
+                    
+                </p>
+                <div class="imgboxlarge smallboxmiddle" >
+                    <div class="imgmap" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200210/201401113.png)">
+                        <div class="imglocation">
+                            경기도 시흥
+                        </div>
+                    </div>
+                </div>
+
+            
+                <div class="mapdetail">
+
+                    <div class="reddottextbox">
+                        <div class="reddot">25</div> 
+                        <div class="mapdetailtext">
+                            14시경 자차를 타고 26번 학진자와 함께 시흥의 신천연합병원 선별진료소에 방문했다. 이후 다시 자차를 타고 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">26</div> 
+                        <div class="mapdetailtext">
+                            14시경 자차를 타고 25번 학진자와 함께 시흥의 신천연합병원 선별진료소에 방문했다. 이후 다시 자차를 타고 자택으로 귀가했다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            자택에만 있었다.
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="daycontents" id="day9">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-09 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 3명 추가
+                    <br> <span style="color: white">4번 환자 퇴원</span>
+                    
+                    </p>
+                <p class="article">
+                    25, 26, 27번 확진자가 추가됐다. 26번 환자와 27번 환자는 각각 25번 환자의 아들과 며느리로 중국 광둥성을 방문하고 지난달 말 귀국했다.
+                </p>
+
+                <div class="mapdetail">
+
+                    <div class="reddottextbox">
+                        <div class="reddot">25</div> 
+                        <div class="mapdetailtext">
+                            확진 판정을 받고 분당 서울대학교병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">26</div> 
+                        <div class="mapdetailtext">
+                            경기도의료원 안성병원으로 이송됐다.
+                        </div>
+                    </div>
+                    <div class="reddottextbox">
+                        <div class="reddot">27</div> 
+                        <div class="mapdetailtext">
+                            경기도의료원 안성병원으로 이송됐다.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="daycontents" id="day10">
+                <div class="datebox ">
+                    <h2> 2020-02-10 </h2>
+                </div>
+                <p class="dateText ">
+                    확진자 없음
+                </p>
+                <p class="article">
+                    
+                </p>
+
+                <div class="mapdetail">
+
+
+                </div>
+
+            </div>
+
+
+            <div class="daycontents" id="day11">
+                <div class="datebox redbordertext">
+                    <h2> 2020-02-11 </h2>
+                </div>
+                <p class="dateText redtext">
+                    확진자 1명 추가
+                </p>
+
+                <p class="article">
+                28번 확진자가 추가됐다. 30세 중국인으로 3번 환자의 지인이다.
+                </p>
+
+                <div class="mapdetail">
+
+                </div>
+
+            </div>
+
+            <div class="daycontents" id="day12">
+                <div class="datebox ">
+                    <h2> 2020-02-12 </h2>
+                </div>
+                <p class="dateText">
+                    <span style="color: white">3번 환자 퇴원</span><br>
+                    <span style="color: white">17번 환자 퇴원</span>
+                </p>
+
+                <p class="article">
+                
+                </p>
+
+                <div class="mapdetail">
+
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+
+        <script src="js/script.js"></script>
+    </body>
+
+    <footer id="footerbar">
+        <div id="footerwrapper">
+            <img src="./img/mabulogo.png" class="mabulogo" alt="">
+            <p id="fteamname">SBS 데이터저널리즘팀</p>
+
+            <p class="footertext">문의 또는 제보 내용이 있으시면<br>data@sbs.co.kr로 보내주세요.<br>
+                신종 코로나 바이러스 감염자들의 빠른 쾌유를 바랍니다. </p>
+
+            <a href="https://drive.google.com/open?id=1GX2Z9egaGRfZ7HCQY3_tLUd15CJ0GA7L&usp=sharing" target="_blank">
+            <div class="additionallink" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399547.jpg)">
+                1월 19일~28일 지도
+            </div></a>
+            <a href="https://drive.google.com/open?id=1PhLiPpXNpNwdhmRgMHDlXlz87298ItZs&usp=sharing" target="_blank">
+            <div class="additionallink" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399546.jpg)">
+                1월 29일~2월 7일 지도
+            </div></a>
+            <a href="https://www.google.com/maps/d/edit?mid=1ihNfsBNw5dIl_9-mG9Yu2VDNauS8lZ0G&ll=37.44468903508776%2C126.7895191&z=18" target="_blank">
+                <div class="additionallink" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399546.jpg)">
+                2월 8일 이후 지도
+                </div></a>
+            <a href="http://mabu.newscloud.sbs.co.kr/202002corona/web/index.html" target="_blank" >
+            <div class="additionallink" style="background-image: url(https://img.sbs.co.kr/newimg/news/20200205/201399543.jpg)">
+                관계망 보기
+            </div></a>
+
+            <div class="creditlist">
+                함께한 사람들 <br>
+                심영구 배여운 정혜경 안혜민 <br>안준석 김민아 이승우 이유민
+            </div>
+        </div>
+    </footer>
+
+
+
+</html>

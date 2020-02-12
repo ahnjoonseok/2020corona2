@@ -1,0 +1,579 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    background: black;
+} 
+
+::-webkit-scrollbar-thumb {
+    background: #6496af; 
+    border-radius: 3px;
+    
+  }
+
+#myBtn1 {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 99;
+
+    width: 60px;
+    height: 60px;
+    text-align: center;
+
+    padding: 0px 10px;
+    line-height: 90%;
+    color: #6496af;
+    border: 2px solid #6496af;
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    background-color: #1c1922;
+
+    cursor: pointer;
+}
+
+#myBtn2 {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+
+    width: 60px;
+    height: 60px;
+    text-align: center;
+
+    padding: 0px 10px;
+    line-height: 90%;
+    color: #6496af;
+    border: 2px solid #6496af;
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    background-color: #1c1922;
+
+    cursor: pointer;
+}
+
+/* 환자리스트 */
+table {
+    /* text-align: left; */
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+th {
+    font-weight: 500;
+    height: 35px;
+}
+
+.reddot2 {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100%;
+    padding: 2px 3px;
+    display: inline-block;
+    background-color: #ff4848;
+}
+
+.whitedot2 {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100%;
+    padding: 2px 3px;
+    display: inline-block;
+    color: black;
+    background-color: #ffffff;
+}
+
+#patientlist {
+    border: 2px solid #6496af;
+    background-color: #1c1922;
+    z-index: 99999;
+
+    position: fixed;
+    width: 700px;
+    height: 800px;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px;
+    margin-left: -350px;
+
+    right: 50% + 50px;
+}
+
+.listage {
+    color: #8a8a8a;
+}
+
+.listblue {
+    color: #6496af;
+}
+
+.list1st {
+    color: #ff4848;
+}
+
+.list2nd {
+    color: rgb(239, 217, 82);
+}
+
+.list3rd {
+    color: rgb(26, 219, 229);
+}
+
+
+.listcontents{
+    height: 750px;
+    overflow: auto;
+    padding: 10px;
+}
+
+.listhide {
+    transition: transform 0.5s ease-out;
+    transform:translate(-1500px, 0px);
+    height: 0;
+    overflow: hidden;
+}
+.liston {
+    transition: transform 0.5s ease-out;
+    transform:translate(0px, 0px);
+}
+
+
+
+
+
+html {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+
+body,h1,h2,h3,h4,h5,p,div,li {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin: 5px auto 20px auto;
+}
+
+h2 {
+    margin: 5px 0;
+}
+
+p {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.current {
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    margin: 30px auto 10px auto;
+}
+
+.currentbox {
+    width: 100px;
+    float: left;
+}
+
+.currentnumbox {
+    margin-top: 10px;
+    padding: 10px 10px;
+    line-height: 100%;
+    color: #6496af;
+    border: 2px solid #6496af;
+    display: inline-block;
+}
+
+.currentnumboxdie {
+    margin-top: 10px;
+    padding: 10px 10px;
+    line-height: 100%;
+    color: #525252;
+    border: 2px solid #525252;
+    display: inline-block;
+}
+
+.currentnumboxcure {
+    margin-top: 10px;
+    padding: 10px 10px;
+    line-height: 100%;
+    color: #b3b3b3;
+    border: 2px solid #b3b3b3;
+    display: inline-block;
+}
+
+
+#introtext {
+    text-align: center;
+}
+
+#author {
+    text-align: center;
+}
+
+#introduce {
+    font-size: 22px;
+    font-weight: 400;
+    color: #b3b3b3;
+    padding-top: 2rem;
+    width: 600px;
+    margin: auto;
+}
+
+.intro {
+    margin-top: 2rem;
+    text-align: center;       
+}
+
+.summary {
+    margin-top: 1rem;
+
+}
+
+.summarywrapper {
+    width: 390px;
+    margin: auto;
+}
+
+.summarydowbox {
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 10px;
+    margin: 8px auto 0 auto;
+    line-height: 100%;
+    display: inline-block;
+}
+
+.summarydatebox {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px 0;
+    margin: 5px auto 0 auto;
+    line-height: 100%;
+    color: #6496af;
+    border: 2px solid #6496af;
+    display: inline-block;
+    
+}
+
+.calsub {
+    text-align: center;
+    width: 500px;
+    padding: 20px 0;
+    margin: auto;
+}
+
+
+.fullcontents {
+
+
+}
+
+.daycontents {
+    width: 500px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.datebox {
+    padding: 10px 10px;
+    margin: 100px auto 0px auto;
+    line-height: 100%;
+    color: #6496af;
+    border: 2px solid #6496af;
+    display: inline-block;
+}
+
+.dateText {
+    text-align: center;
+    color: #6496af;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 0.5rem auto 1rem auto;
+}
+
+.mapdetail {
+    margin: 10px auto 0 auto;
+    width: auto;
+
+    padding: 0 10px;
+    text-align: left;
+    display: block;
+}
+
+.reddottextbox {
+
+}
+
+.reddot {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100%;
+    padding: 4px 3px;
+    display: inline-block;
+    background-color: #ff4848;
+    float: left;
+}
+
+.whitedot {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100%;
+    padding: 4px 3px;
+    display: inline-block;
+    color: black;
+    background-color: #fff;
+    float: left;
+}
+
+.blackdot {
+    background-color: black;
+}
+
+.mapdetailtext {
+    color: #b3b3b3;
+    padding: 2px 0 15px 40px;
+}
+
+/* 텍스트 */
+.article {
+    margin: 2rem auto 1rem auto;
+}
+
+.redtext {
+    color: #ff4848;
+}
+
+.redbordertext {
+    color: #ff4848;
+    border: 2px solid #ff4848;
+}
+
+/* 이미지 */
+.imgboxlarge {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #6496af;
+    padding: 10px;
+    margin: 0 auto 5px auto;
+}
+
+.imgmap {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.imglocation {
+    position: absolute;    
+    padding: 10px 10px;
+    margin: 0 auto 10px auto;
+    line-height: 100%;
+    display: table-cell;
+    color: #1c1922;
+    font-weight: 700;
+    background-color: #6496af;
+}
+
+
+/* 스크롤관련 */
+
+#navigation {
+    top: 0;
+    width: 100%;
+    height: 90px;
+    padding-top: 10px;
+    margin: 0 auto 0 auto;
+    background-color: #1c1922;
+    overflow-x: auto;
+    z-index: 100;
+}
+
+.nav-on {
+    display: initial;
+    position: fixed;
+}
+.nav-hide {
+    display: none;
+}
+/* 가로사이즈 변경해야하는것 */
+.navigationdatebox{
+    /* overflow-x: hidden; */
+    width: 1400px;
+    margin: auto;    
+}
+
+.additionallink {
+    background-size: cover;
+    padding: 40px 10px;
+    margin: 0 5px 15px 5px ;
+
+    line-height: 90%;
+    color: white;
+    border: 2px solid #6496af;
+    display: inline-block;
+
+    height: 100px;
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+/* 모바일로 넘어가는 부분 */
+
+
+
+
+
+
+
+
+
+  
+@media screen and (max-width: 540px) {
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .summary {
+        width: 100%;
+    }
+
+    .summarywrapper {
+        width: 310px;
+        margin: auto;
+    }
+
+    .summarydowbox {
+        width: 40px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .summarydatebox {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #introduce {
+        width: 90%;
+        padding: 0 10px;
+
+        margin: auto;
+    }
+
+    .daycontents {
+        width: 100%;
+        text-align: center;
+        margin: 50px auto;
+        padding: 0 10px;
+    }
+
+
+    .imgboxlarge {
+        padding: 5px;
+        margin: 0 auto 10px auto;
+        width: 90vw;
+        height: 90vw;
+        border: 2px solid #6496af;
+
+    }
+
+    #navigation {
+        width: 100%;
+        height: 75px;
+    }
+
+    .navigationdatebox{
+        /* overflow-x: hidden; */
+        width: 1150px;
+        margin: auto;
+    }
+
+    .calsub {
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        margin: auto;
+    }
+
+    .additionallink {
+        padding: 40% 10px;
+        line-height: 90%;
+        color: white;
+        border: 2px solid #6496af;
+        display: inline-block;
+        width: 100%;
+        
+    }
+    
+
+    #patientlist {
+        border: 2px solid #6496af;
+        background-color: #1c1922;
+    
+    
+        z-index: 99999;
+    
+        position: fixed;
+        width: 90vw;
+        height: 50vh;
+        top: 50%;
+        left: 50%;
+        margin-top: -25vh;
+        margin-left: -45vw;
+    
+        right: 50% + 50px;
+    }
+
+    .listcontents{
+        height: 48vh;
+        overflow: auto;
+        padding: 10px;
+    }
+
+
+}
