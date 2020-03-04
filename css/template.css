@@ -120,7 +120,7 @@ video::-webkit-media-controls-panel {
 #footerbar {
     margin: 12rem 0 5rem ;
     width: 100%;
-    height: 500px;
+    height: 600px;
     z-index: 10;
 }
 
