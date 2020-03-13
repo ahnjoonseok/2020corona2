@@ -474,7 +474,7 @@ p {
 /* 가로사이즈 변경해야하는것 */
 .navigationdatebox{
     /* overflow-x: hidden; */
-    width: 230px;
+    width: 680px;
     margin: auto;    
 }
 
@@ -579,7 +579,7 @@ p {
 
     .navigationdatebox{
         /* overflow-x: hidden; */
-        width: 200px;
+        width: 700px;
         margin: auto;
     }
 
